@@ -23,6 +23,18 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     }
 
     override fun onClick(v: View) {
+        if (editText1.text.isEmpty()) {
+            button1.isClickable = false
+            button2.isClickable = false
+            button3.isClickable = false
+            button4.isClickable = false
+        } else if (editText2.text.isEmpty()) {
+            button1.isClickable = false
+            button2.isClickable = false
+            button3.isClickable = false
+            button4.isClickable = false
+        }
+
         val intent = Intent(this, SecondActivity::class.java)
         var edittext1 = editText1.text.toString().toDouble()
         var edittext2 = editText2.text.toString().toDouble()
