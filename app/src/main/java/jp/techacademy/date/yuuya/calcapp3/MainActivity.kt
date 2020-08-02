@@ -24,11 +24,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onClick(v: View) {
         val intent = Intent(this, SecondActivity::class.java)
-        var edittext1 = editText1.text.toString()
-        var edittext2 = editText2.text.toString()
-        edittext1.toDouble()
-
-        fun edittext1.toDouble()
+        var edittext1 = editText1.text.toString().toDouble()
+        var edittext2 = editText2.text.toString().toDouble()
 
         if (v.id == R.id.button1) {
             intent.putExtra("VALUE1",edittext1+edittext2)
