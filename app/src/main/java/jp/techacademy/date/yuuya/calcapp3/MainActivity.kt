@@ -30,11 +30,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         if (v.id == R.id.button1) {
             intent.putExtra("VALUE1",edittext1+edittext2)
         } else if (v.id == R.id.button2) {
-            intent.putExtra("VALUE2",edittext1-edittext2)
+            intent.putExtra("VALUE1",edittext1-edittext2)
         } else if (v.id == R.id.button3) {
-            intent.putExtra("VALUE3",edittext1*edittext2)
+            intent.putExtra("VALUE1",edittext1*edittext2)
         } else if (v.id == R.id.button4) {
-            intent.putExtra("VALUE3",edittext1/edittext2)
+            intent.putExtra("VALUE1",edittext1/edittext2)
         }
         startActivity(intent)
     }
