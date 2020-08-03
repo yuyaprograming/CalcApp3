@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     }
 
     override fun onClick(v: View) {
+
+        val intent = Intent(this, SecondActivity::class.java)
+        var edittext1 = editText1.text.toString().toDouble()
+        var edittext2 = editText2.text.toString().toDouble()
+
         if (editText1.text.isEmpty()) {
             button1.isClickable = false
             button2.isClickable = false
@@ -34,10 +39,6 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             button3.isClickable = false
             button4.isClickable = false
         }
-
-        val intent = Intent(this, SecondActivity::class.java)
-        var edittext1 = editText1.text.toString().toDouble()
-        var edittext2 = editText2.text.toString().toDouble()
 
         if (v.id == R.id.button1) {
             intent.putExtra("VALUE1",edittext1+edittext2)
